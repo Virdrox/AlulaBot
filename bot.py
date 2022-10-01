@@ -22,7 +22,6 @@ async def annonce(ctx):
     )
 
     embed.set_footer(text = 'This is a footer')
-    embed.set_author(ctx.author)
     embed.add_field(name = 'Field Name', value = 'FieldValue', inline = False)
     embed.add_field(name = 'Field Name', value = 'FieldValue', inline = False)
     embed.add_field(name = 'Field Name', value = 'FieldValue', inline = False)
