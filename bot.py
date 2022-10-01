@@ -5,7 +5,7 @@ import os
 
 dotenv.load_dotenv()
 
-alulaBot = commands.Bot(command_prefix = "!", description = "AlulaBot", intents = discord.Intents.all())
+alulaBot = commands.Bot(command_prefix = "/", description = "AlulaBot", intents = discord.Intents.all())
 
 @alulaBot.event
 async def on_ready():
