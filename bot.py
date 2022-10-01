@@ -12,11 +12,11 @@ async def on_ready():
     print(">> Running...")
 
 @alulaBot.command()
-async def annonce(ctx, titre):
+async def annonce(ctx, title):
     print(f">> Command from {ctx.author} | {ctx.author.mention} : annonce")
     
     embed = discord.Embed(
-        title = {titre},
+        title = 'Test',
         description = 'This is a description',
         colour = discord.Colour.red()
     )
@@ -27,5 +27,9 @@ async def annonce(ctx, titre):
     embed.add_field(name = 'Field Name', value = 'FieldValue', inline = False)
 
     await ctx.send(embed = embed)
+
+@alulaBot.hybrid_group(fallback="get")
+async def tag(ctx, name):
+    await ctx.send(f"Showing tag: {name}")
 
 alulaBot.run(os.getenv("ALULABOT_TOKEN"))
