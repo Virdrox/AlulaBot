@@ -26,6 +26,6 @@ async def annonce(ctx):
     embed.add_field(name = 'Field Name', value = 'FieldValue', inline = False)
     embed.add_field(name = 'Field Name', value = 'FieldValue', inline = False)
 
-    await alulaBot.say(embed = embed)
+    await alulaBot.send(embed = embed)
 
 alulaBot.run(os.getenv("ALULABOT_TOKEN"))
