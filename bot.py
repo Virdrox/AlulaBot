@@ -32,4 +32,8 @@ async def annonce(ctx, title):
 async def tag(ctx, name):
     await ctx.send(f"Showing tag: {name}")
 
+@alulaBot.command()
+async def create(ctx, name):
+    await ctx.send(f"Created tag: {name}")
+
 alulaBot.run(os.getenv("ALULABOT_TOKEN"))
