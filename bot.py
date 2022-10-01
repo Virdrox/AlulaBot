@@ -12,11 +12,11 @@ async def on_ready():
     print(">> Running...")
 
 @alulaBot.command()
-async def annonce(ctx):
+async def annonce(ctx, titre):
     print(f">> Command from {ctx.author} | {ctx.author.mention} : annonce")
     
     embed = discord.Embed(
-        title = 'Title',
+        title = {titre},
         description = 'This is a description',
         colour = discord.Colour.red()
     )
